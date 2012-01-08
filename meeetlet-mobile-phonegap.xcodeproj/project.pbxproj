@@ -33,6 +33,7 @@
 		633B114114B9C15800E4191D /* Capture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 633B114014B9C15800E4191D /* Capture.bundle */; };
 		633B114314B9C15800E4191D /* PhoneGap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 633B114214B9C15800E4191D /* PhoneGap.plist */; };
 		633B114714B9C15800E4191D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 633B114614B9C15800E4191D /* AppDelegate.m */; };
+		633B115014B9C1B100E4191D /* www in Resources */ = {isa = PBXBuildFile; fileRef = 633B114F14B9C1B100E4191D /* www */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,9 +51,9 @@
 		633B111A14B9C15800E4191D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		633B111C14B9C15800E4191D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		633B111E14B9C15800E4191D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		633B112214B9C15800E4191D /* meeetlet-mobile-phonegap-Info.plist */ = {isa = PBXFileReference; path = "meeetlet-mobile-phonegap-Info.plist"; sourceTree = "<group>"; };
+		633B112214B9C15800E4191D /* meeetlet-mobile-phonegap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "meeetlet-mobile-phonegap-Info.plist"; sourceTree = "<group>"; };
 		633B112414B9C15800E4191D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		633B112614B9C15800E4191D /* meeetlet-mobile-phonegap-Prefix.pch */ = {isa = PBXFileReference; path = "meeetlet-mobile-phonegap-Prefix.pch"; sourceTree = "<group>"; };
+		633B112614B9C15800E4191D /* meeetlet-mobile-phonegap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "meeetlet-mobile-phonegap-Prefix.pch"; sourceTree = "<group>"; };
 		633B112714B9C15800E4191D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		633B112914B9C15800E4191D /* PhoneGap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhoneGap.framework; path = /Users/Shared/PhoneGap/Frameworks/PhoneGap.framework; sourceTree = "<absolute>"; };
 		633B112E14B9C15800E4191D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -64,9 +65,10 @@
 		633B113E14B9C15800E4191D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/splash/Default@2x.png"; sourceTree = "<group>"; };
 		633B114014B9C15800E4191D /* Capture.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Capture.bundle; path = Resources/Capture.bundle; sourceTree = "<group>"; };
 		633B114214B9C15800E4191D /* PhoneGap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PhoneGap.plist; sourceTree = "<group>"; };
-		633B114514B9C15800E4191D /* AppDelegate.h */ = {isa = PBXFileReference; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		633B114514B9C15800E4191D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		633B114614B9C15800E4191D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
-		633B114914B9C15800E4191D /* README */ = {isa = PBXFileReference; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		633B114914B9C15800E4191D /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		633B114F14B9C1B100E4191D /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		633B10F414B9C15800E4191D = {
 			isa = PBXGroup;
 			children = (
+				633B114F14B9C1B100E4191D /* www */,
 				633B112014B9C15800E4191D /* meeetlet-mobile-phonegap */,
 				633B110514B9C15800E4191D /* Frameworks */,
 				633B110314B9C15800E4191D /* Products */,
@@ -290,6 +293,7 @@
 				633B113F14B9C15800E4191D /* Default@2x.png in Resources */,
 				633B114114B9C15800E4191D /* Capture.bundle in Resources */,
 				633B114314B9C15800E4191D /* PhoneGap.plist in Resources */,
+				633B115014B9C1B100E4191D /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +404,7 @@
 				GCC_PREFIX_HEADER = "meeetlet-mobile-phonegap/meeetlet-mobile-phonegap-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
 				INFOPLIST_FILE = "meeetlet-mobile-phonegap/meeetlet-mobile-phonegap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -411,7 +416,7 @@
 					/usr/lib/libSystem.B.dylib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -427,6 +432,7 @@
 				GCC_PREFIX_HEADER = "meeetlet-mobile-phonegap/meeetlet-mobile-phonegap-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
 				INFOPLIST_FILE = "meeetlet-mobile-phonegap/meeetlet-mobile-phonegap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -438,7 +444,7 @@
 					/usr/lib/libSystem.B.dylib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

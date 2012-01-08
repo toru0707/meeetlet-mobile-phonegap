@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+
+
+	<!-- iPad/iPhone specific css below, add after your main css >
+	<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
+	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />		
+	-->
+	<link rel="stylesheet" href="css/jquery.mobile-1.0.min.css" />
+	<!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
+	<script type="text/javascript" src="lang/meeetlet.ja.js"></script>
+	<script type="text/javascript" charset="utf-8" src="phonegap-1.3.0.js"></script>
+	<script src="js/jquery-1.6.4.min.js"></script>
+	<script src="js/jquery.mobile-1.0.min.js"></script>
+    <script type="text/javascript">
+
+
+	// If you want to prevent dragging, uncomment this section
+	/*
+	function preventBehavior(e) 
+	{ 
+      e.preventDefault(); 
+    };
+	document.addEventListener("touchmove", preventBehavior, false);
+	*/
+	
+	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+	for more details -jm */
+	/*
+	function handleOpenURL(url)
+	{
+		// TODO: do something with the url passed in.
+	}
+	*/
+	
+	function onBodyLoad()
+	{		
+		document.addEventListener("deviceready", onDeviceReady, false);
+		
+	}
+	
+	/* When this function is called, PhoneGap has been initialized and is ready to roll */
+	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+	for more details -jm */
+	function onDeviceReady()
+	{
+		// do your thing!
+		//navigator.notification.alert("PhoneGap is working")
+		
+		//header
+		/*
+		$("#index h1").html(LANG.header.title.default);
+		$(".header-title-createEvent").html(LANG.header.title.createEvent);
+		$(".header-title-showAdjstedEvents").html(LANG.header.title.showAdjstedEvents);
+		$(".header-title-showAdjstingEvnets").html(LANG.header.title.showAdjstingEvnets);
+		$(".header-title-showPublicEvnets").html(LANG.header.title.showPublicEvnets);
+		$(".header-title-showInvitePeople").html(LANG.header.title.showInvitePeople);
+		$(".header-title-showEventDetail").html(LANG.header.title.showEventDetail);
+		$(".header-title-searchEvents").html(LANG.header.title.searchEvents);
+		$(".header-title-adjastEvnet").html(LANG.header.title.adjastEvnet);
+		
+		//navbar
+		$(".footer-nav-adjstedEvents").html(LANG.footer.nav.adjstedEvents);
+		$(".footer-nav-adjstingEvents").html(LANG.footer.nav.adjstingEvents);
+		$(".footer-nav-publicEvents").html(LANG.footer.nav.publicEvents);
+		$(".footer-nav-others").html(LANG.footer.nav.others);
+		*/
+
+	}
+
+	$(function(){
+		$("#index h1").html(LANG.header.title.default);
+		$("#createEvent h1").html(LANG.header.title.createEvent);
+		$("#adjastedEvents h1").html(LANG.header.title.adjstedEvents);
+		$("#adjastingEvents h1").html(LANG.header.title.adjstingEvents);
+		$("#publicEvents h1").html(LANG.header.title.publicEvents);
+		$("#others h1").html(LANG.header.title.others);
+		$("#showInvitePeople h1").html(LANG.header.title.showInvitePeople);
+		$("#showEventDetail h1").html(LANG.header.title.showEventDetail);
+		$("#searchEvents h1").html(LANG.header.title.searchEvents);
+		$("#adjastEvnet h1").html(LANG.header.title.adjastEvnet);
+		
+		//navbar
+		$("#footer-nav-adjastedEvents .ui-btn-text").html(LANG.footer.nav.adjstedEvents);
+		$("#footer-nav-adjastingEvents .ui-btn-text").html(LANG.footer.nav.adjstingEvents);
+		$("#footer-nav-publicEvents .ui-btn-text").html(LANG.footer.nav.publicEvents);
+		$("#footer-nav-others .ui-btn-text").html(LANG.footer.nav.others);
+
+			});
+    
+    </script>
+  </head>
+  <body onload="onBodyLoad()">
+	  	//index
+		<div data-role="page" id="index">
+			<div data-role="header"> 
+				<h1></h1> 
+			</div>
+			<div data-role="content">
+				<div id="map_canvas" style="width:320px; height:366px"></div>
+			</div>
+			<div data-role="footer">
+				<div data-role="navbar">
+					<ul>
+						<li><a id="footer-nav-adjastedEvents"  data-icon="footer-nav-adjastedEvents" href="#adjastedEvents"></a></li>
+						<li><a id="footer-nav-adjastingEvents" data-icon="footer-nav-adjastingEvents" href="#adjastingEvents"></a></li>
+						<li><a id="footer-nav-publicEvents" data-icon="footer-nav-publicEvents" href="#publicEvents"></a></li>
+						<li><a id="footer-nav-others" data-icon="footer-nav-others" href="#others" ></a></li>
+					</ul>
+				</div>
+			</div> 
+
+		</div>
+
+	  	//createEvent
+		<div data-role="page" id="createEvent"> 
+			<div data-role="header"> 
+				<h1></h1> 
+			</div>
+			<div data-role="content">
+
+			</div>
+		</div>
+		
+		//adjastedEvent
+		<div data-role="page" id="adjastedEvents"> 	
+			<div data-role="header"> 
+				<h1>test</h1> 
+			</div>
+
+
+		</div>
+	
+		//adjastingEvent
+		<div data-role="page" id="adjastingEvents"> 
+			<div data-role="header"> 
+				<h1></h1> 
+			</div>
+
+
+		</div>
+	
+		//publicEvent
+		<div data-role="page" id="publicEvents"> 
+			<div data-role="header"> 
+				<h1></h1> 
+			</div>
+
+
+		</div>
+	
+		//others
+		<div data-role="page" id="others"> 
+			<div data-role="header"> 
+				<h1></h1> 
+			</div>
+
+
+		</div>
+
+	</body>
+</html>
