@@ -17,7 +17,7 @@
 	<script type="text/javascript" charset="utf-8" src="phonegap-1.3.0.js"></script>
 	<script src="js/jquery-1.6.4.min.js"></script>
 	<script src="js/jquery.mobile-1.0.min.js"></script>
-	<script type="text/javascript" src="meeetlet.js"></script>
+	<script type="text/javascript" src="js/meeetlet.js"></script>
     <script type="text/javascript">
 
 
@@ -94,62 +94,164 @@
 		$("#footer-nav-publicEvents .ui-btn-text").html(LANG.footer.nav.publicEvents);
 		$("#footer-nav-others .ui-btn-text").html(LANG.footer.nav.others);
 
-<<<<<<< HEAD
 		var m = new meeetlet('localhost', 8888, 'toru0707@gmail.com', 'password');
-		alert(m);
-			});
-=======
+		
+		//イベントの作成
 		$("#createEventButton").click(function(){
-			$.get(
-				
-				)
+			m.createEvent();
+
+			});
+
+		//公開イベントの取得
 
 
-			}));
->>>>>>> 948dd36d57fb112286c97df8a071ddaef6152861
+		});
+		
     
     </script>
   </head>
   <body onload="onBodyLoad()">
 	  	//index
 		<div data-role="page" id="index" >
-			<div data-role="header"> 
-				<h1></h1> 
+			<div data-role="header">
+				<a href="#chooseCreateEvent" data-icon="check">イベント作成</a>
+				<h1>meeetlet!</h1> 
 			</div>
 			<div data-role="content">
-<<<<<<< HEAD
-				<div id="map_canvas" style="width:320px; height:366px"></div>
-=======
-				<ul data-role="listview">
-				      <li><a href="#adjastedEvents">2 ページ</a></li>
-				      <li><a href="#page3">3 ページ</a></li>
-				      <li><a href="#page4">4 ページ</a></li>
-				</ul>
->>>>>>> 948dd36d57fb112286c97df8a071ddaef6152861
+
 			</div>
 			<div data-role="footer">
 				<div data-role="navbar">
 					<ul>
-						<li><a id="footer-nav-adjastedEvents"  data-icon="footer-nav-adjastedEvents" href="#adjastedEvents"></a></li>
-						<li><a id="footer-nav-adjastingEvents" data-icon="footer-nav-adjastingEvents" href="#adjastingEvents"></a></li>
-						<li><a id="footer-nav-publicEvents" data-icon="footer-nav-publicEvents" href="#publicEvents"></a></li>
-						<li><a id="footer-nav-others" data-icon="footer-nav-others" href="#others" ></a></li>
+						<li><a id="footer-nav-adjastedEvents"  data-icon="footer-nav-adjastedEvents" href="#adjastedEvents">調整済</a></li>
+						<li><a id="footer-nav-adjastingEvents" data-icon="footer-nav-adjastingEvents" href="#adjastingEvents">調整中</a></li>
+						<li><a id="footer-nav-publicEvents" data-icon="footer-nav-publicEvents" href="#publicEvents">公開</a></li>
+						<li><a id="footer-nav-others" data-icon="footer-nav-others" href="#others" >その他</a></li>
 					</ul>
 				</div>
 			</div> 
 
 		</div>
 
-	  	//createEvent
-		<div data-role="page" id="createEvent" data-add-back-btn="true"> 
+		//chooseCreateEvent
+		<div data-role="page" id="chooseCreateEvent" data-add-back-btn="true"> 
 			<div data-role="header"> 
-				<h1></h1> 
+				<h1>イベントの作成</h1> 
 			</div>
 			<div data-role="content">
+				<input type="button" value="調整有り" onClick="location.href='#createAdjastingEvent'">
+				<input type="button" value="調整なし" onClick="location.href='#createNoAdjastingEvent'">
+			</div>
+
+		</div>
+
+	  	//createAdjastingEvent
+		<div data-role="page" id="createAdjastingEvent" data-add-back-btn="true"> 
+			<div data-role="header"> 
+				<h1>調整有りイベント</h1> 
+			</div>
+			<div data-role="content">
+				<form action="" method="get">
+					<label for="title">タイトル</label>
+					<input type="text" id="title">
+					<label for="place">候補場所</label>
+					<select name="place" data-inline="true">
+						<option value="p1">銀座・有楽町</option>
+					</select>
+					<input type="button" value="add-place" />
+					<label for="place">候補日付</label>
+					<input type="date" name="date" data-inline="true"/>
+					<input type="button" value="add-date" />
+					<label for="budget">想定予算額</label>
+					<input type="text" id="budget">
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup">     
+							<legend>候補ジャンル</legend>    
+							<input type="checkbox" name="g1" id="g1" value="g1">     
+							<label for="g1">和食</label>  
+							<input type="checkbox" name="g2" id="g2" value="g2">   
+							<label for="g2">フランス料理</label>   
+							<input type="checkbox" name="g3" id="g3" value="g3"> 
+							<label for="g3">イタリア料理</label>    
+						</fieldset>
+					</div>
+					<label for="shop">候補の店</label>
+					<input type="text" id="shop" data-inline="true">
+					<input type="button" name="add-shop" value="add-shop" data-inline="true">
+					
+					<input type="button" name="invite-friends" value="友人を誘う" onClick="location.href='#showInvitePeople'">	
+
+					<input type="submit" value="作成">
+				</form>
 
 			</div>
+
 		</div>
-		
+	
+	  	//createNoAdjastingEvent
+		<div data-role="page" id="createNoAdjastingEvent" data-add-back-btn="true"> 
+			<div data-role="header"> 
+				<h1>調整なしイベント</h1> 
+			</div>
+			<div data-role="content">
+				<form action="" method="get">
+					<label for="title">タイトル</label>
+					<input type="text" id="title">
+					<label for="place">場所</label>
+					<select name="place" data-inline="true">
+						<option value="p1">銀座・有楽町</option>
+					</select>
+					<label for="place">日付</label>
+					<input type="date" name="date" data-inline="true"/>
+					<input type="button" value="add-date" />
+					<label for="budget">想定予算額</label>
+					<select name="budget" data-inline="true">
+						<option value="b1">1000円以内</option>
+						<option value="b2">2000円以内</option>
+						<option value="b3">3000円以内</option>
+						<option value="b4">5000円以内</option>
+					</select>
+					<label for="genre">ジャンル</genre>    
+					<select name="genre" data-inline="true">
+						<option value="g1">和食</option>  
+						<option value="g2">フランス料理</option>   
+						<option value="g3">イタリア料理</option>    
+					</select>
+					<label for="shop">店</label>
+					<input type="text" id="shop" data-inline="true">
+					
+					<input type="button" name="invite-friends" value="友人を誘う" onClick="location.href='#showInvitePeople'">	
+
+					<input type="submit" value="作成">
+				</form>
+
+			</div>
+
+		</div>	
+
+		//showInvitePeople
+		<div data-role="page" id="showInvitePeople" data-add-back-btn="true"> 	
+			<div data-role="header"> 
+				<h1>test</h1>
+				<a href="" class="ui-btn-right" data-icon="check" >完了</a>
+			</div>
+			<div data-role="content">
+				<input type="search" value="">
+				<div class="ui-grid-b"> 
+					<div class="ui-block-a"><div class="ui-bar ui-bar-e" style="height:120px">A</div></div> 
+					<div class="ui-block-b"><div class="ui-bar ui-bar-e" style="height:120px">B</div></div> 
+					<div class="ui-block-c"><div class="ui-bar ui-bar-e" style="height:120px">C</div></div> 
+					<div class="ui-block-a"><div class="ui-bar ui-bar-e" style="height:120px">A</div></div> 
+					<div class="ui-block-b"><div class="ui-bar ui-bar-e" style="height:120px">B</div></div> 
+					<div class="ui-block-c"><div class="ui-bar ui-bar-e" style="height:120px">C</div></div> 
+					<div class="ui-block-a"><div class="ui-bar ui-bar-e" style="height:120px">A</div></div> 
+					<div class="ui-block-b"><div class="ui-bar ui-bar-e" style="height:120px">B</div></div> 
+					<div class="ui-block-c"><div class="ui-bar ui-bar-e" style="height:120px">C</div></div> 
+				</div>
+				
+			</div>
+		</div>
+
 		//adjastedEvent
 		<div data-role="page" id="adjastedEvents" > 	
 			<div data-role="header"> 
