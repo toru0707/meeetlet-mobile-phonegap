@@ -93,18 +93,28 @@
 		$("#footer-nav-publicEvents .ui-btn-text").html(LANG.footer.nav.publicEvents);
 		$("#footer-nav-others .ui-btn-text").html(LANG.footer.nav.others);
 
-			});
+		$("#createEventButton").click(function(){
+			$.get(
+				
+				)
+
+
+			}));
     
     </script>
   </head>
   <body onload="onBodyLoad()">
 	  	//index
-		<div data-role="page" id="index">
+		<div data-role="page" id="index" >
 			<div data-role="header"> 
 				<h1></h1> 
 			</div>
 			<div data-role="content">
-				<div id="map_canvas" style="width:320px; height:366px"></div>
+				<ul data-role="listview">
+				      <li><a href="#adjastedEvents">2 ページ</a></li>
+				      <li><a href="#page3">3 ページ</a></li>
+				      <li><a href="#page4">4 ページ</a></li>
+				</ul>
 			</div>
 			<div data-role="footer">
 				<div data-role="navbar">
@@ -120,7 +130,7 @@
 		</div>
 
 	  	//createEvent
-		<div data-role="page" id="createEvent"> 
+		<div data-role="page" id="createEvent" data-add-back-btn="true"> 
 			<div data-role="header"> 
 				<h1></h1> 
 			</div>
@@ -130,9 +140,29 @@
 		</div>
 		
 		//adjastedEvent
-		<div data-role="page" id="adjastedEvents"> 	
+		<div data-role="page" id="adjastedEvents" > 	
 			<div data-role="header"> 
 				<h1>test</h1> 
+			</div>
+			<div data-role="content">
+				<form action="" method="get">
+					<label for="place">場所</label>
+					<select name="place">
+						<option value="p1">銀座・有楽町</option>
+					</select>
+					<label for="shop">お店</label>
+					<input type="text" id"shop-name">
+					<label for="date">時期</label>
+					<input type="date" name="date" id="date" value="" />
+					<label for="genle">ジャンル</label>
+					<select name="genle">
+						<option value="g1">和食</option>
+						<option value="g2">フレンチ</option>
+						<option value="g3">イタリアン</option>
+					</select>
+					<input type="submit" value="作成">
+				</form>
+
 			</div>
 
 
