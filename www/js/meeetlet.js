@@ -11,7 +11,7 @@ LANG = {
 		title : {
 			default : "meeetlet!",
 			createEvnet : "イベントの作成",
-			adjstedEvents : "et",
+			adjstedEvents : "調整済みのイベント",
 			adjstingEvents : "調整中のイベント",
 			publicEvents : "公開中のイベント",
 			others : "その他",
